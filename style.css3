@@ -1,0 +1,63 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+/* Transitions */
+.hover-button, .focus-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-button:hover {
+    background-color:hsl(261, 91.10%, 48.40%);
+    color: white;
+    transform: scale(1.1);
+}
+
+.focus-button:focus {
+    background-color:rgb(243, 10, 173);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+.animated-banner {
+    margin: 20px 0;
+    font-size: 24px;
+    animation: slideIn 2s ease-out;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animated-spinner {
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    border: 5px solid #ccc;
+    border-top: 5px solid #333;
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+}
+
+/* Hidden Modal */
+.hidden {
+    display: none;
+}
